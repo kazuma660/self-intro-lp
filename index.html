@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>堤千真 / 蒸し焼き — Self Introduction</title>
+<meta name="description" content="千葉工業大学 情報変革科学部 情報工学科 3年 堤千真（蒸し焼き）の自己紹介LP" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;600;800;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cyan: #22d3ee;
+    --magenta: #ec4899;
+    --violet: #8b5cf6;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    background: #0a0a0f;
+    color: #e5e7eb;
+    overflow-x: hidden;
+  }
+  .font-display { font-family: 'Orbitron', 'Noto Sans JP', sans-serif; }
+
+  /* Animated background grid */
+  .grid-bg {
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 211, 238, 0.08) 1px, transparent 1px);
+    background-size: 50px 50px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .glow-orb {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.35;
+    z-index: 0;
+    pointer-events: none;
+    animation: float 12s ease-in-out infinite;
+  }
+  .orb-1 { background: #ec4899; top: -100px; left: -100px; }
+  .orb-2 { background: #22d3ee; bottom: -100px; right: -100px; animation-delay: -6s; }
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(50px, 30px) scale(1.1); }
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #22d3ee 0%, #8b5cf6 50%, #ec4899 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    transition: all .4s ease;
+  }
+  .card:hover {
+    border-color: rgba(236, 72, 153, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px -20px rgba(236, 72, 153, 0.3);
+  }
+  .badge {
+    background: rgba(34, 211, 238, 0.1);
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    color: #22d3ee;
+  }
+  .reveal { opacity: 0; transform: translateY(30px); transition: all .8s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  .hero-title {
+    background: linear-gradient(135deg, #fff 0%, #22d3ee 50%, #ec4899 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -0.02em;
+  }
+  .glitch-bar {
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #22d3ee, #ec4899, transparent);
+    animation: slide 3s linear infinite;
+  }
+  @keyframes slide {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="glow-orb orb-1"></div>
+<div class="glow-orb orb-2"></div>
+
+<main class="relative z-10">
+
+  <!-- HERO -->
+  <section class="min-h-screen flex items-center px-6 md:px-16 py-20">
+    <div class="max-w-6xl mx-auto w-full">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge text-xs font-semibold mb-8 reveal">
+        <span class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
+        WEB3 / AI 概論 — Week 01
+      </div>
+      <h1 class="font-display text-5xl md:text-8xl font-black mb-6 hero-title leading-none reveal">
+        TSUTSUMI<br/>KAZUMA
+      </h1>
+      <div class="text-xl md:text-3xl font-bold text-gray-300 mb-4 reveal">
+        堤 千真 <span class="text-pink-400">/</span> 蒸し焼き
+      </div>
+      <p class="text-base md:text-lg text-gray-400 max-w-2xl mb-10 reveal">
+        千葉工業大学 情報変革科学部 情報工学科 3年<br/>
+        AI と対話しながら思考を加速させ、実装に落とし込むことに関心があります。
+      </p>
+      <div class="flex flex-wrap gap-3 reveal">
+        <span class="px-4 py-2 rounded-full badge text-sm">#AI</span>
+        <span class="px-4 py-2 rounded-full badge text-sm">#ゲーム</span>
+        <span class="px-4 py-2 rounded-full badge text-sm">#Programming</span>
+        <span class="px-4 py-2 rounded-full badge text-sm">#Web3</span>
+      </div>
+      <div class="mt-20 glitch-bar reveal"></div>
+    </div>
+  </section>
+
+  <!-- PROFILE -->
+  <section class="px-6 md:px-16 py-20">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-4 mb-12 reveal">
+        <span class="font-display text-cyan-400 text-sm tracking-widest">// 01</span>
+        <h2 class="font-display text-3xl md:text-5xl font-black gradient-text">PROFILE</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card rounded-2xl p-8 reveal">
+          <div class="text-cyan-400 text-xs font-bold tracking-widest mb-3">NAME</div>
+          <div class="text-2xl font-bold text-white mb-1">堤 千真</div>
+          <div class="text-gray-400">ハンドル：蒸し焼き</div>
+        </div>
+        <div class="card rounded-2xl p-8 reveal">
+          <div class="text-cyan-400 text-xs font-bold tracking-widest mb-3">AFFILIATION</div>
+          <div class="text-xl font-bold text-white mb-1">千葉工業大学</div>
+          <div class="text-gray-400">情報変革科学部 情報工学科 3年</div>
+        </div>
+        <div class="card rounded-2xl p-8 md:col-span-2 reveal">
+          <div class="text-cyan-400 text-xs font-bold tracking-widest mb-3">INTEREST</div>
+          <div class="text-lg text-gray-200">AI と人の協働 / ゲーム開発 / 新しい技術の探究</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MY ANSWER -->
+  <section class="px-6 md:px-16 py-20">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-4 mb-4 reveal">
+        <span class="font-display text-pink-400 text-sm tracking-widest">// 02</span>
+        <h2 class="font-display text-3xl md:text-5xl font-black gradient-text">MY ANSWER</h2>
+      </div>
+      <p class="text-gray-400 mb-12 reveal">今の自分の答え — 現時点のスナップショット</p>
+
+      <div class="card rounded-2xl p-8 md:p-12 mb-6 reveal">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="text-5xl">🤖</div>
+          <div>
+            <div class="text-pink-400 text-xs font-bold tracking-widest mb-2">Q1</div>
+            <h3 class="text-2xl md:text-3xl font-bold text-white">自分にとってAIとは何か</h3>
+          </div>
+        </div>
+        <p class="text-gray-300 leading-relaxed text-base md:text-lg mt-6">
+          私はAIを、単なる「回答生成機」ではなく、
+          <span class="text-cyan-300 font-bold">「思考を加速させ、実装をサポートするペアプログラミングのパートナー」</span>
+          として捉えています。プログラミングで行き詰まった時や、新しい技術を学ぶ際に、まず自分の意図を伝え、それに対するフィードバックやコード案をもらう形で利用しています。
+        </p>
+      </div>
+
+      <div class="card rounded-2xl p-8 md:p-12 mb-6 reveal">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="text-5xl">💬</div>
+          <div>
+            <div class="text-pink-400 text-xs font-bold tracking-widest mb-2">Q2</div>
+            <h3 class="text-2xl md:text-3xl font-bold text-white">AIとどう向き合いたいか</h3>
+          </div>
+        </div>
+        <p class="text-gray-300 leading-relaxed text-base md:text-lg mt-6">
+          提示されたコードをそのまま使うのではなく、
+          <span class="text-pink-300 font-bold">「なぜこの関数を使うのか」「もっと効率的な書き方はないか」</span>
+          と問い直すことを大切にしています。対話を通じて自分自身の理解を深めるプロセスを守り、AIを「答えをくれる存在」ではなく「思考を磨く相棒」として扱っていきたいです。
+        </p>
+      </div>
+
+      <div class="card rounded-2xl p-8 md:p-12 reveal">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="text-5xl">🚀</div>
+          <div>
+            <div class="text-pink-400 text-xs font-bold tracking-widest mb-2">Q3</div>
+            <h3 class="text-2xl md:text-3xl font-bold text-white">何を作りたい／探究したいか</h3>
+          </div>
+        </div>
+        <p class="text-gray-300 leading-relaxed text-base md:text-lg mt-6">
+          関心領域である <span class="text-violet-300 font-bold">AI × ゲーム</span> の交差点で、
+          プレイヤーの思考や行動に応じて変化するような「対話型の体験」を作ってみたいです。
+          まだ構想は曖昧ですが、この講義を通じて言語化しながら形にしていきます。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="px-6 md:px-16 py-16 border-t border-white/5">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="font-display text-2xl font-black gradient-text mb-3">KAZUMA TSUTSUMI</div>
+      <div class="text-gray-500 text-sm mb-6">Built with Antigravity + Claude Code + GitHub + Vercel</div>
+      <div class="text-gray-600 text-xs">© 2026 — web3 / AI 概論 @ 千葉工業大学</div>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+</script>
+
+</body>
+</html>
